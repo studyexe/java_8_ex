@@ -12,7 +12,8 @@ public class SchoolController {
 	//3. 성적조회
 	//4. 전체조회
 	//5. 프로그램 종료
-	
+	Student[] student1=null;
+			
 	public void start() {
 		Scanner sc= new Scanner(System.in);
 		boolean check=true;
@@ -25,6 +26,10 @@ public class SchoolController {
 			switch(num) {
 			case 1:
 				System.out.println("학생을 등록 해주세요.");
+				StudentService ss= new StudentService();
+				student1=ss.addStudent();
+				
+				
 				break;
 				
 			case 2:
@@ -35,6 +40,9 @@ public class SchoolController {
 				break;
 			case 4:
 				System.out.println("전체 내용을 조회 합니다.");
+				StudentView sv=new StudentView();
+				sv.view(student1);
+				
 				break;
 			case 5:
 				System.out.println("프로그램을 종료 합니다.");
