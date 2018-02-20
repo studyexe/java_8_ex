@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		System.out.println("program Start");
+		//System.out.println("program Start");
 		SchoolController school = new SchoolController();
 		school.start();		//new SchoolController().start();  로 두줄을 합칠수 있다.  
 							// school이 주소값  new SchoolController()도 주소값이므로 가능. 주소값에 있는 start메서드 실행

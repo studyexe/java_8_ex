@@ -31,15 +31,14 @@ public class SchoolController {
 				student1=ss.addStudent();
 				break;
 			case 2:
-				System.out.println("2 . 성적 입력");
+				
 				ss.addPoint(student1);
 				break;
 			case 3:
+				
 				System.out.println("3 . 학생 조회");
 				break;
 			case 4:
-
-				System.out.println("4 . 전체 조회");
 				sv.view(student1);
 				break;
 			case 5:
@@ -48,7 +47,7 @@ public class SchoolController {
 				check = false;
 				break;
 			default :
-				System.out.println("없는 번호입니다.");
+				System.out.println("없는 번호입니다. 다시 선택해주세요.");
 				continue;
 			}//switch
 

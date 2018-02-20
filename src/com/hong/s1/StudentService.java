@@ -47,8 +47,8 @@ public class StudentService {
 			student1[i].math=sc.nextInt();
 			
 			student1[i].total= student1[i].kor+student1[i].eng+student1[i].math;
-			System.out.println();
-			student1[i].avg=student1[i].total/3;
+			student1[i].avg=(double)student1[i].total/3;
+			
 			
 		}
 	}
