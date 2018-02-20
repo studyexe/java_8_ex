@@ -9,15 +9,15 @@ public class StudentService {
 	//학생수만큼
 	//이름 입력
 	//번호 입력
-	Student[] student1=null;
-	int num;
+
+	
 	
 	
 	public Student[] addStudent() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("학생 수를 입력하세요.");
-		num = sc.nextInt();
-		student1 = new Student[num];
+		int num = sc.nextInt();
+		Student[] student1 = new Student[num];
 		
 		for(int i=0;i<student1.length;i++) {
 			Student student = new Student();
