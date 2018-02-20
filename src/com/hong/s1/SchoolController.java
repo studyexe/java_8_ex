@@ -19,7 +19,7 @@ public class SchoolController {
 		Scanner sc= new Scanner(System.in);
 		StudentService ss= new StudentService();
 		StudentView sv = new StudentView();
-
+		
 		while(check) {
 			System.out.println("번호를 입력해주세요");
 			System.out.println("1.학생 등록 |2. 성적 입력 |3. 성적 조회 |4. 전체 조회 |5.프로그램 종료");
@@ -35,8 +35,11 @@ public class SchoolController {
 				ss.addPoint(student1);
 				break;
 			case 3:
+				Student s1=new Student();
+				s1= ss.search(student1);
 				
-				System.out.println("3 . 학생 조회");
+				sv.viewStudent(s1);
+				
 				break;
 			case 4:
 				sv.view(student1);

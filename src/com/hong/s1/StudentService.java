@@ -11,7 +11,7 @@ public class StudentService {
 	//번호 입력
 	Student[] student1=null;
 	int num;
-
+	
 
 	public Student[] addStudent() {
 		Scanner sc=new Scanner(System.in);
@@ -45,13 +45,39 @@ public class StudentService {
 			student1[i].eng=sc.nextInt();
 			System.out.println(student1[i].name+"의 수학 점수 입력");
 			student1[i].math=sc.nextInt();
-			
+
 			student1[i].total= student1[i].kor+student1[i].eng+student1[i].math;
 			student1[i].avg=(double)student1[i].total/3;
-			
-			
+
+
 		}
 	}
+
+
+	//search 메서드명
+	//번호를 입력받아서 학생 한명을 찾아서
+	//해당 출력은 StudentView class의 viewStudent메서드에서 출력
+
+	public Student search(Student[] student1) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("학생 번호를 입력하세요.");
+		int num =sc.nextInt();
+		boolean check=true;
+		int index=0;
+
+		for(int i =0;i<student1.length;i++) {
+			if(num==student1[i].num) {
+				check = false;
+				index=i;
+
+			}	
+		}
+		
+
+		return student1[index];
+
+	}
+
 
 
 
