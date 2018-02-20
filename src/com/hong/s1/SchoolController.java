@@ -22,7 +22,7 @@ public class SchoolController {
 
 		while(check) {
 			System.out.println("번호를 입력해주세요");
-			System.out.println("1.학생 등록 |2. 성정 입력 |3. 성적 조회 |4. 전체 조회 |5.프로그램 종료");
+			System.out.println("1.학생 등록 |2. 성적 입력 |3. 성적 조회 |4. 전체 조회 |5.프로그램 종료");
 			select = sc.nextInt();
 			switch(select) {
 
@@ -31,21 +31,22 @@ public class SchoolController {
 				student1=ss.addStudent();
 				break;
 			case 2:
-
 				System.out.println("2 . 성적 입력");
-
+				ss.addPoint(student1);
+				break;
 			case 3:
-
-				System.out.println("3 . 성적 조회");
+				System.out.println("3 . 학생 조회");
+				break;
 			case 4:
 
 				System.out.println("4 . 전체 조회");
 				sv.view(student1);
-
+				break;
 			case 5:
 
 				System.out.println("5 . 프로그램 종료");
 				check = false;
+				break;
 			default :
 				System.out.println("없는 번호입니다.");
 				continue;
