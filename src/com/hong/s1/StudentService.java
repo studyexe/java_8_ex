@@ -62,19 +62,27 @@ public class StudentService {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("학생 번호를 입력하세요.");
 		int num =sc.nextInt();
-		boolean check=true;
+		/*boolean check=true;
 		int index=0;
 
 		for(int i =0;i<student1.length;i++) {
 			if(num==student1[i].num) {
 				check = false;
 				index=i;
-
+				break;
 			}	
+		}*/
+		Student student =new Student();
+		for(int i =0;i<student1.length;i++) {
+			if(num==student1[i].num) {
+				student =student1[i];
+				break;
+			}
 		}
 		
+		
 
-		return student1[index];
+		return student;
 
 	}
 
